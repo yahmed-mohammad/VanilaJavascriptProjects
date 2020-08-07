@@ -7,7 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <style>
+      #loading, #results{
+        display:none;
+      }
+    </style>
 
     <title>Loan Calculator</title>
   </head>
@@ -33,14 +37,14 @@
                   <div class="form-group">
                     <input type="number" class="form-control" id="years" placeholder="Years to Repay">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" id="button">
                     <input type="submit" value="Calculate" class="btn btn-dark btn-block">
                   </div>
                 </form>
                 <!-- LOADER-->
-                <!-- <div id="loading">
+                <div id="loading">
                   <iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="120" height="120" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                </div> -->
+                </div>
                 <!--RESULTS AFTER CALCULATION-->
                 <div id="results" class="pt-4">
                   <h5>Results</h5>
