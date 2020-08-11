@@ -29,31 +29,29 @@ class UI {
                 </div>
             </div>
             <h4 class="mb-3">Latest Repositories</h4>
-            <div id="repos"></div>
+            <div class="repos"></div>
         `;
     }
 
     showRepos(repos) {
         let output;
         repos.forEach(function(repo) {
-            output += `
-                <div class="card card-body mb-2">
+            output +=
+                `<div class="card card-body mb-2">
                     <div class="row">
-                        <div class="col-md-6 ml-auto'>
+                        <div class="col-md-6">
                             <a href="${repo.html_url}" target="_blank">${repo.name}</a>
                         </div>
-                        <div class="col-md-6 ml-auto'>
-                        <span></span>
+                        <div class="col-md-6">
                             <span class="badge badge-primary mb-1">Stars: ${repo.stargazers_count} </span>
                             <span class="badge badge-warning mb-1">Watchers: ${repo.watchers_count} </span>
                             <span class="badge badge-success mb-1">Forks: ${repo.forks_count} </span>
                         </div>
                     </div>
-                </div>
-            `;
+                </div>`;
         });
-        //Show the repositories
-        document.querySelector('#repos').innerHTML = output;
+        //Show the repositories in ui
+        document.querySelector('.repos').innerHTML = output;
     }
 
     clearProfile() {
